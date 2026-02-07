@@ -1,0 +1,15 @@
+{
+    "channels": [
+    "UCIo-oW-DDwulwKy91vz-91g",
+    "UCwV_A5L1hhEVfld6Wbxn3jg",
+    "UCqAkK44QDpqueoEIKO1AymA",
+    "UCLJvwQ-173AlbFt7zvPl-CQ",
+    "UCmRe_hOfMppsUfoW1_b3Eiw",
+    "UCE1PLliRk3urTjDG6kGByiA"
+    ],
+    "preferences": {
+        "genres": ["Drama","Animation","Thriller", "Action"],
+        "languages": ["Tamil", "English", "Hindi", "Korean"],
+        "favourites": [ "Bahubali","RRR","Bridgerton", "Killing Eve", "Friends", "The Glory"]
+    }
+}

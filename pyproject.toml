@@ -1,8 +1,21 @@
 [project]
 name = "cheta"
 version = "0.1.0"
-description = "A simple CLI launcher for live sports GUI"
-authors = [{ name = "Your Name" }]
+description = "A simple CLI launcher for personal assistant Cheta"
+authors = [{ name = "Varsha" }]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "requests>=2.30.0",
+    "python-dotenv>=1.0.0",
+    "tk>=0.1.0",
+    "google-genai>=0.7.0"
+]
 
 [project.scripts]
 cheta = "cheta.cli:main"
+
+[build-system]
+requires = ["setuptools>=65.5", "wheel"]
+build-backend = "setuptools.build_meta"

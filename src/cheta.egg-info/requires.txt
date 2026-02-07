@@ -1,0 +1,4 @@
+requests>=2.30.0
+python-dotenv>=1.0.0
+tk>=0.1.0
+google-genai>=0.7.0

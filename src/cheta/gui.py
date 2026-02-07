@@ -1,14 +1,27 @@
-import tkinter as tk
+"""
+GUI module for Cheta, providing a simple interface to access features like YouTube recommendations.
+"""
 
-def open_gui():
-    root = tk.Tk()
-    root.title("Cheta - Live Sports")
-    root.geometry("300x150")
+import webbrowser
 
-    btn_cricket = tk.Button(root, text="Cricket", width=15)
-    btn_football = tk.Button(root, text="Football", width=15)
+from .youtube.youtube_fetcher import YouTubeFetcher
 
-    btn_cricket.pack(pady=10)
-    btn_football.pack(pady=10)
+import logging
 
-    root.mainloop()
+logging.basicConfig()
+logger = logging.getLogger(__name__)
+
+def get_reactions() -> None:
+    """
+    Fetch personalized YouTube video recommendations and open the top recommendation in the web browser.
+    """
+    yt_fetcher = YouTubeFetcher()
+    top_video = yt_fetcher.get_recommendation()
+
+    if not top_video:
+        logger.warning("No recommendations available.")
+        return
+    
+    url = top_video["url"]
+    logger.info(f"Opening URL: {url}")
+    webbrowser.open(url)
