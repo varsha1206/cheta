@@ -4,7 +4,7 @@ YouTubeFetcher class to fetch latest videos from specified channels and get pers
 
 import json
 import os
-from datetime import time
+import time
 
 import requests
 from dotenv import load_dotenv
