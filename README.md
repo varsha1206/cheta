@@ -1,2 +1,192 @@
-# cheta
-Chai Time with Cheta and live sports :)
+# Cheta 🏏⚽  
+*Chai time with Cheta for live cricket and football scores*
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [How Cheta Works](#how-cheta-works)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [GUI Behavior](#gui-behavior)
+- [Notifications](#notifications)
+- [Configuration (Planned)](#configuration-planned)
+- [Tech Stack](#tech-stack)
+- [Roadmap](#roadmap)
+- [Disclaimer](#disclaimer)
+- [License](#license)
+
+---
+
+## Overview
+
+**cheta** is a lightweight Python package that shows **live cricket and football scores** through a **tiny Tkinter GUI** that runs quietly in the background.
+
+It is designed for people who want to stay updated on live matches **without interrupting their primary work** (coding, studying, meetings, etc.).
+
+Cheta launches from the command line and immediately starts tracking live matches, caching scores, and notifying you of important events.
+
+---
+
+## Key Features
+
+- 🖥 **Minimal background GUI**
+  - Very small Tkinter window
+  - Designed to stay unobtrusive
+  - Runs continuously in the background
+
+- ⚡ **Fast startup with caching**
+  - On first launch, all live match scores are cached
+  - Smooth navigation between matches
+
+- 🔄 **Live updates**
+  - Scrapes live cricket and football websites
+  - Auto-refresh every **5 minutes**
+
+- 🧭 **Navigable match view**
+  - Scroll or switch between live matches
+  - View individual match scores in real time
+
+- 🚨 **Smart event notifications**
+  - Cricket: sixes, wickets
+  - Football: goals
+  - Thin, non-intrusive popup bar
+  - Auto-dismisses after **10 seconds**
+  - Includes a visible loading/progress bar
+
+---
+
+## How Cheta Works
+
+1. **Startup**
+   - Cheta is launched via the CLI
+   - Live matches are scraped
+   - Scores are cached locally
+
+2. **Runtime**
+   - Scores refresh every 5 minutes
+   - GUI updates automatically
+   - Important events are detected
+
+3. **Notifications**
+   - A slim horizontal popup appears
+   - Displays the event update
+   - Progress bar runs for 10 seconds
+   - Popup disappears automatically
+
+---
+
+## Installation
+
+> ⚠️ Cheta is under active development. Installation steps may evolve.
+
+### Local Installation (Development)
+
+```bash
+git clone https://github.com/your-username/cheta.git  
+cd cheta  
+pip install -e .
+```
+
+---
+
+## Getting Started
+
+Start Cheta using the command:
+
+```bash
+cheta hello
+```
+
+This will:
+- Launch the background Tkinter GUI
+- Fetch and cache live scores
+- Begin monitoring matches automatically
+
+Cheta will continue running until manually stopped.
+
+---
+
+## GUI Behavior
+
+- Runs as a **small, persistent window**
+- Can be minimized or left in the background
+- Designed to avoid stealing focus
+- Lightweight and low-resource
+
+Navigation allows you to:
+- Switch between matches
+- View updated scores instantly
+
+---
+
+## Notifications
+
+Cheta sends notifications only for **important events**:
+
+### Cricket
+- 🏏 Six
+- ❌ Wicket
+
+### Football
+- ⚽ Goal
+
+**Notification style:**
+- Thin horizontal bar
+- Appears briefly on screen
+- Includes a 10-second loading/progress bar
+- Auto-dismisses without user interaction
+
+This ensures updates are visible but never disruptive.
+
+---
+
+## Configuration (Planned)
+
+Future versions will support:
+
+- Custom refresh intervals
+- Enable/disable notifications
+- Event-type filtering
+- Favorite match pinning
+- Screen position controls
+
+---
+
+## Tech Stack
+
+- **Python**
+- **Tkinter** – GUI
+- **Web scraping** (e.g. requests, BeautifulSoup)
+- **Local caching** for performance
+- **CLI entry point** (`cheta`)
+
+---
+
+## Roadmap
+
+- [ ] Stable CLI interface
+- [ ] Robust scraping with fallback sources
+- [ ] Configurable notification rules
+- [ ] Match favorites
+- [ ] Cross-platform testing (Windows / Linux / macOS)
+- [ ] PyPI release
+- [ ] System tray integration (optional)
+
+---
+
+## Disclaimer
+
+Cheta relies on scraping third-party sports websites.  
+Ensure usage complies with the respective websites’ **terms of service**.
+
+This project is for **personal and educational use**.
+
+---
+
+## License
+
+MIT License
+

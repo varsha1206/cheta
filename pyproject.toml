@@ -1,0 +1,8 @@
+[project]
+name = "cheta"
+version = "0.1.0"
+description = "A simple CLI launcher for live sports GUI"
+authors = [{ name = "Your Name" }]
+
+[project.scripts]
+cheta = "cheta.cli:main"
